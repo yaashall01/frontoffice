@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {HomeComponent} from "./shared/home/home.component";
+import {ProductCarouselComponent} from "./product/product-carousel/product-carousel.component";
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '',component: HomeComponent, children: [
+    {path: 'product-card', component: ProductCarouselComponent}]},
+  /*{path: 'textile',component: TextileComponent, title: 'UIR-Shop Textile'},
+  {path: 'goodies',component: GoodiesComponent, title: 'UIR-Shop Goodies'},
+  {path: 'high-tech',component: GoodiesComponent, title: 'UIR-Shop High-Tech'},*/
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

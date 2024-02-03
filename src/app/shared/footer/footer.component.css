@@ -1,0 +1,9 @@
+.layout-footer {
+
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #ddd;
+}

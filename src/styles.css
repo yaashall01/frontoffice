@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #5b8bf7;
+  --secondary-color: #f78b5b;
+  --accent-color: #8bf75b;
+  --background-color: #f5f5f5;
+  --text-color: #333333;
+
+  --font-family: 'Arial', sans-serif;
+  --font-size: 16px;
+  --heading-font-family: 'Helvetica', sans-serif;
+  --heading-font-weight: bold;
+
+  --base-spacing: 8px;
+  --small-spacing: calc(var(--base-spacing) / 2);
+  --large-spacing: calc(var(--base-spacing) * 2);
+
+  --border-radius: 4px;
+  --border-color: #dddddd;
+  --border-width: 1px;
+
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* html {
+  font-size: var(--font-size);
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--small-spacing) var(--base-spacing);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+*/
