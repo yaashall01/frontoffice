@@ -1,14 +1,23 @@
 <!-- Heading -->
-<div class="text-center py-6">
-  <h2 class="text-4xl font-bold text-gray-800">Portez fièrement vos couleurs</h2>
-  <p class="text-xl text-gray-600 mt-2">
-    Ajoutez une touche de style à votre quotidien que vous soyez au campus ou ailleurs.
-  </p>
-</div>
-<div class="card">
-  <p-carousel [value]="products" [numVisible]="4" [numScroll]="4" [circular]="true"  [autoplayInterval]="3000">
-    <ng-template let-product pTemplate="item">
-      <app-product-carousel [product]="product"></app-product-carousel>
-    </ng-template>
-  </p-carousel>
+<div class="main-content my-auto mx-auto">
+  <div class="text-right py-3 mr-2">
+    <h2 class="title main-title">Portez fièrement</h2>
+    <p class="title slogan">
+      vos couleurs</p>
+    <p class="title subtitle">
+      Ajoutez une touche de style à votre quotidien
+    </p>
+    <div class="title secondary-subtitle mr-5 ">
+      que vous soyez au campus ou ailleurs.
+    </div>
+  </div>
+  <div class="card mt-2 pb-4">
+    <p-carousel [value]="products" [numVisible]="4" [numScroll]="4" [circular]="true" >
+      <ng-template let-product pTemplate="item">
+        <app-product-card [product]="product">
+
+        </app-product-card>
+      </ng-template>
+    </p-carousel>
+  </div>
 </div>

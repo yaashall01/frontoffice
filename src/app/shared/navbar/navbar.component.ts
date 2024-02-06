@@ -11,10 +11,10 @@ export class NavbarComponent {
 
   onInit() {
     this.model = [
-      {label: 'UIR-Shop', icon: 'pi pi-fw pi-home', routerLink: ['/']},
-      {label: 'Products', icon: 'pi pi-fw pi-shopping-cart', routerLink: ['/products']},
-      {label: 'About', icon: 'pi pi-fw pi-info-circle', routerLink: ['/about']},
-      {label: 'Contact', icon: 'pi pi-fw pi-envelope', routerLink: ['/contact']}
+      {label: 'UIR-Shop', routerLink: ['/']},
+      {label: 'Products', routerLink: ['/products']},
+      {label: 'About', routerLink: ['/about']},
+      {label: 'Contact', routerLink: ['/contact']}
 
     ]
 

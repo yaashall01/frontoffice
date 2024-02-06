@@ -1,5 +1,5 @@
 
-:host ::ng-deep {
+/*:host ::ng-deep {
   .product-item {
     .product-item-content {
       border: 1px solid var(--surface-d);
@@ -13,5 +13,64 @@
       width: 50%;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
     }
+  }
+}*/
+
+/* Base styles for the titles */
+.title {
+  font-family: var(--font-family), sans-serif; /* Replace with your font */
+  text-align: right; /* Centers the text */
+  color: #333; /* Sets the text color, adjust as needed */
+  padding-right: 2rem; /* Adds space below the title */
+}
+
+/* Specific styles for the main title "Portez fièrement vos couleurs" */
+.main-title {
+  font-size: 3.9em; /* Adjust size as needed */
+  font-weight: bold; /* Makes the font bold */
+  color: #003667;
+  margin: 0 0 -1.05em 0; /* Adds space above and below the title */
+}
+
+.slogan{
+  font-size: 5.5em;
+  font-family: var(--slogan-font-family), sans-serif;
+  font-weight: lighter;
+  color: #D0D700;
+}
+
+/* Styles for the subtitle "Ajoutez une touche de style à votre quotidien" */
+.subtitle {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: -1.5em 0 0 0;
+  color: #003667;
+}
+
+/* Styles for the secondary subtitle "que vous soyez au campus ou ailleurs." */
+.secondary-subtitle {
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #D0D700;
+  background-color: #003667;
+  border-radius: 20px;
+  width: max-content;
+  display: inline-block;
+  padding: 0 0.5rem;
+
+}
+
+/* Adjustments for responsive design */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2em; /* Smaller font size on mobile */
+  }
+
+  .subtitle {
+    font-size: 1.2em; /* Smaller font size on mobile */
+  }
+
+  .secondary-subtitle {
+    font-size: 0.9em; /* Smaller font size on mobile */
   }
 }

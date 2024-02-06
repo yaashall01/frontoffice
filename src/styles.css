@@ -1,6 +1,8 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Roboto:wght@300&display=swap');
 
 *,
 *::before,
@@ -11,15 +13,18 @@
 }
 
 :root {
-  --primary-color: #5b8bf7;
-  --secondary-color: #f78b5b;
-  --accent-color: #8bf75b;
-  --background-color: #f5f5f5;
-  --text-color: #333333;
+  --primary-color: #003667;
+  --secondary-color: #D0D700;
+  --accent-color: #3E7FBB;
+  --secondary-accent-color: #6E702D;
+  --background-color: #F6FAF9;
+  --text-color: #0C0C20;
+  --text-gray: #A7A7AC;
 
-  --font-family: 'Arial', sans-serif;
+  --slogan-font-family: 'Gamja Flower', cursive;
+  --font-family: 'Roboto', sans-serif;
   --font-size: 16px;
-  --heading-font-family: 'Helvetica', sans-serif;
+  --heading-font-family: 'Roboto', sans-serif;
   --heading-font-weight: bold;
 
   --base-spacing: 8px;
@@ -56,3 +61,53 @@ button {
   box-shadow: var(--box-shadow);
 }
 */
+
+/* Ensure your base styles include a responsive meta tag in your HTML */
+/* Example: <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
+
+/* Sticky Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1000; /* to ensure it stays above other content */
+}
+
+/* Responsive Main Content */
+.main-content {
+  position: relative;
+  justify-content: center;
+  gap: 2rem; /* adjust the spacing between product cards */
+}
+
+.product-card {
+  flex-basis: calc(33.333% - 1rem); /* three cards per row minus gap */
+  margin-bottom: 1rem; /* space between rows */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-card {
+    flex-basis: calc(50% - 1rem); /* two cards per row on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    flex-basis: 100%; /* full width on mobile devices */
+  }
+
+  /* Adjust navbar for mobile */
+  .navbar {
+    /* Insert your styles for a mobile-friendly navbar here */
+  }
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+}
+

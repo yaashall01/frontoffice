@@ -1,18 +1,37 @@
 
-<div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
-  <div class="mb-3">
-    <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product }}" [alt]="product.name" class="w-6 shadow-2" />
-  </div>
-  <div>
-    <h4 class="mb-1">{{ product.name }}</h4>
-    <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
-    <p-tag [value]="product.description"></p-tag>
-    <div class="mt-5 flex align-items-center justify-content-center gap-2">
+<div class="card  border-0 surface-border border-round-3xl m-4 text-center py-5 px-4 md:h-4/5">
+  <div class="mb-3 carousel-container">
+
+    <div class="">
+      <p-carousel [value]="products" [numVisible]="1" [numScroll]="1" [circular]="true" >
+        <ng-template let-product pTemplate="item">
+
+          <div class="mb-3">
+            <img src="{{ product.img }}" [alt]="product.name" class="w-full shadow-2" />
+          </div>
+
+
+        </ng-template>
+      </p-carousel>
     </div>
-     <div class="mt-5 flex align-items-center justify-content-center gap-2">
-      <button pButton type="button" label="Add to Cart" class="p-button-rounded p-button-success p-button-outlined"></button>
+
   </div>
-    <div >
-      <i class="pi pi-box"></i><span class="p-tag p-tag-rounded p-tag-info p-mr-2">Produit en stock</span>
-      </div>
+
+  <div class="relative ">
+    <h4 class="mb-1">{{product.name}}</h4>
+    <h6 class="mt-0 mb-3">{{product.description}}</h6>
+    <span class="text-white bg-blue-950 border-round-3xl px-3 font-lighter">- Bleu -</span>
+
+    <!-- Additional product details here -->
+  </div>
+
+
+  <div class="mt-5 flex align-items-center justify-content-center gap-2">
+    <button type="button" class="">Add to Cart</button>
+  </div>
+
+    <div class="stock-indicator">
+      <i class="pi pi-box"></i><span class="ml-1 ">Produit en stock</span>
+    </div>
 </div>
+
