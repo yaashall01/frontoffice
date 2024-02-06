@@ -9,12 +9,15 @@ import { ProductCardComponent } from './product/product-card/product-card.compon
 import {CarouselModule} from "primeng/carousel";
 import {TagModule} from "primeng/tag";
 import {ButtonModule} from "primeng/button";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { DetailsProductComponent } from './pages/details-product/details-product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductCardComponent,
-    ProductCarouselComponent
+    ProductCarouselComponent,
+    DetailsProductComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import {ButtonModule} from "primeng/button";
     SharedModule,
     CarouselModule,
     TagModule,
-    ButtonModule
+    ButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

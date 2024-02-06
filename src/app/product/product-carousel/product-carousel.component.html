@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="card mt-2 pb-4">
-    <p-carousel [value]="products" [numVisible]="4" [numScroll]="4" [circular]="true" >
+    <p-carousel [value]="productList" [numVisible]="4" [numScroll]="4" [circular]="true" >
       <ng-template let-product pTemplate="item">
         <app-product-card [product]="product">
 

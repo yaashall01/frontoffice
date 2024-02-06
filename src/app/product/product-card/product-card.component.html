@@ -2,12 +2,12 @@
 <div class="card  border-0 surface-border border-round-3xl m-4 text-center py-5 px-4 md:h-4/5">
   <div class="mb-3 carousel-container">
 
-    <div class="">
-      <p-carousel [value]="products" [numVisible]="1" [numScroll]="1" [circular]="true" >
-        <ng-template let-product pTemplate="item">
+    <div class=" ">
+      <p-carousel [value]="product.imgs" [numVisible]="1" [numScroll]="1" [circular]="true" >
+        <ng-template let-img pTemplate="item">
 
           <div class="mb-3">
-            <img src="{{ product.img }}" [alt]="product.name" class="w-full shadow-2" />
+            <img src="{{img }}" [alt]="product.nomProduct" class="w-full shadow-2" />
           </div>
 
 
@@ -18,7 +18,7 @@
   </div>
 
   <div class="relative ">
-    <h4 class="mb-1">{{product.name}}</h4>
+    <h4 class="mb-1">{{product.nomProduct}}</h4>
     <h6 class="mt-0 mb-3">{{product.description}}</h6>
     <span class="text-white bg-blue-950 border-round-3xl px-3 font-lighter">- Bleu -</span>
 
